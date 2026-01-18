@@ -5,16 +5,16 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![X Follow](https://img.shields.io/twitter/follow/purpuldev)](https://x.com/purpuldev)
 
-Configurable head tilting for R6 and full head/torso tilting for R15 player characters.
+Head tilting for R6 and full head/torso tilting for R15 player characters.
 Showcases shown in my Twitter profile.
 
 </div>
 
-## Features
+## ✨ Features
 * **R15 & R6 Support**: Full torso and head tilting for R15, with head-only tilting for R6.
 * **Configurable**: Tilt limits, tilt responsiveness, and replication interval can all be adjusted.
 
-## Installation
+## 📥 Installation
 
 ### Manual Installation
 1. **Server**: Place the Server script into `ServerScriptService`.
