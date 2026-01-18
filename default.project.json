@@ -1,26 +1,22 @@
 {
-  "name": "character-tilt",
+  "name": "CharacterTilt",
   "tree": {
     "$className": "DataModel",
-
     "ReplicatedStorage": {
-      "$className": "ReplicatedStorage",
-      "Tilt": {
-        "$className": "UnreliableRemoteEvent"
+      "Remotes": {
+        "$className": "Folder",
+        "Tilt": {
+          "$className": "UnreliableRemoteEvent"
+        }
       }
     },
-
     "ServerScriptService": {
-      "$className": "ServerScriptService",
       "Server": {
         "$path": "src/server"
       }
     },
-
     "StarterPlayer": {
-      "$className": "StarterPlayer",
       "StarterPlayerScripts": {
-        "$className": "StarterPlayerScripts",
         "Client": {
           "$path": "src/client"
         }
