@@ -2,6 +2,7 @@
   "name": "CharacterTilt",
   "tree": {
     "$className": "DataModel",
+    
     "ReplicatedStorage": {
       "Remotes": {
         "$className": "Folder",
@@ -10,11 +11,13 @@
         }
       }
     },
+    
     "ServerScriptService": {
       "Server": {
         "$path": "src/server"
       }
     },
+    
     "StarterPlayer": {
       "StarterPlayerScripts": {
         "Client": {
