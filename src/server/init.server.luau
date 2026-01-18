@@ -3,7 +3,25 @@
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local TiltEvent = ReplicatedStorage.Tilt
+local ExistingRemotesFolder =
+	ReplicatedStorage:FindFirstChild("Remotes") :: Folder?
+if not ExistingRemotesFolder then
+	ExistingRemotesFolder = Instance.new("Folder")
+	ExistingRemotesFolder.Name = "Remotes"
+	ExistingRemotesFolder.Parent = ReplicatedStorage
+end
+
+local RemotesFolder = ExistingRemotesFolder :: Folder
+
+local ExistingTiltEvent =
+	RemotesFolder:FindFirstChild("Tilt") :: UnreliableRemoteEvent?
+if not ExistingTiltEvent then
+	ExistingTiltEvent = Instance.new("UnreliableRemoteEvent")
+	ExistingTiltEvent.Name = "Tilt"
+	ExistingTiltEvent.Parent = RemotesFolder
+end
+
+local TiltEvent = ExistingTiltEvent :: UnreliableRemoteEvent
 
 local function onServerEvent(player: Player, lookVector: Vector3)
 	-- 1.01 allows for tiny rounding errors while blocking malicious values
