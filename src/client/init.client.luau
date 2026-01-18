@@ -12,7 +12,8 @@ local RunService = game:GetService("RunService")
 
 local LocalPlayer = Players.LocalPlayer
 
-local TiltEvent = ReplicatedStorage.Tilt
+local TiltEvent =
+	ReplicatedStorage.Remotes:WaitForChild("Tilt") :: UnreliableRemoteEvent
 local Camera = workspace.CurrentCamera :: Camera
 
 -- Standard offsets for default Roblox rigs
